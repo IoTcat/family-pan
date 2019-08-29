@@ -1247,5 +1247,13 @@ function pr($data, $die = false) {
 		</script>
 	<?php endif; ?>
 <script src="https://cdn.yimian.xyz/ushio-js/ushio-footer.min.js"></script>
+<script>
+$.post('https://home-auth.yimian.xyz/isInner/', function(msg){
+    if(msg.isInner == true){
+        alert('你正在家中，请通过 桌面->>我的电脑->>Z盘 访问家庭网盘！！');
+        window.location.href='//home.yimian.xyz/';
+    }
+})
+</script>
 </body>
 </html>
